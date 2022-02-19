@@ -1,0 +1,37 @@
+body{
+    background-image: url('background.jpg');
+    display: flex;
+    align-items: center;
+    height: 700px;
+    justify-content: center;
+}
+.drum-keys{
+    display: flex;
+    column-gap: 20px;
+}
+.drum-key{
+    padding: 10px 25px 7px 25px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    cursor: pointer;
+    border: .3rem solid black;
+    border-radius: .5rem;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+.drum-key:active{
+    border: .3rem solid gold;
+}
+.drum-key:hover{
+    transform: scale(1.1);
+}
+.key-name{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+.audio-name{
+    color : gold;
+    font-weight: bold;
+}

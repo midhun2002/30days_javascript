@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Javascript Drum Kit</title>
+</head>
+<body>
+    <div class="drum-keys">
+        <div class="drum-key a">
+           <div class="key-name a">A</div>
+           <div class="audio-name a">boom</div>
+        </div>
+        <div class="drum-key s">
+            <div class="key-name s">S</div>
+            <div class="audio-name s">clap</div>
+         </div>
+        <div class="drum-key d">
+            <div class="key-name d">D</div>
+            <div class="audio-name d">hihat</div>
+        </div>
+        <div class="drum-key f">
+            <div class="key-name f">F</div>
+            <div class="audio-name f">kick</div>
+         </div>
+         <div class="drum-key g">
+             <div class="key-name g">G</div>
+             <div class="audio-name g">openhat</div>
+          </div>
+         <div class="drum-key h">
+             <div class="key-name h">H</div>
+             <div class="audio-name h">ride</div>
+         </div>
+         <div class="drum-key j">
+            <div class="key-name j">J</div>
+            <div class="audio-name j">snare</div>
+         </div>
+         <div class="drum-key k">
+             <div class="key-name k">K</div>
+             <div class="audio-name k">tink</div>
+          </div>
+         <div class="drum-key l">
+             <div class="key-name l">L</div>
+             <div class="audio-name l">tom</div>
+         </div>
+   </div>
+   <script>
+       const allKeys = {"a" : "boom",'s' : "clap","d" : "hihat","f" : "kick","g" : "openhat","h" : "ride","j" : "snare","k" : "tink","l" : "tom"};
+       for(const k in allKeys){     
+         document.querySelector(`.${k}`).addEventListener('click',clicked);
+       }
+       function clicked(event){
+        const element = event.target;
+        const dataAttribute = element.getAttribute('class');
+        const key = dataAttribute.split(' ')[1];
+        console.log(key);
+        let audio = new Audio(`./sounds/${allKeys[key]}.wav`);
+        audio.play();
+        return ;
+       }
+   </script>
+</body>
+</html>
