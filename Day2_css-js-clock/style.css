@@ -1,0 +1,35 @@
+body{
+    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    height:668px;
+}
+.time-container{
+    position : absolute;
+    display : flex;
+    background-color:transparent;
+    flex-direction : column;
+    border-radius : 50%;
+    justify-content : center;
+    border : 10px solid white;
+    width: 200px;
+    height : 200px;
+    padding : 5px;
+}
+.needle{
+    position : absolute;
+    background-color:black;
+    width:50%;
+    height :3px;
+    transform-origin :100%;
+}
+.hour-hand{
+
+}   
+.minute-hand{
+    transform : translateY(-3px);
+}
+.second-hand{
+    transform : translateY(-6px); 
+}
